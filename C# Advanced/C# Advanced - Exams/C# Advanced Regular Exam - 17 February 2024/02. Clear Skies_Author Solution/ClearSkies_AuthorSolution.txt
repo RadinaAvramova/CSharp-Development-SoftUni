@@ -1,0 +1,93 @@
+namespace ClearSkies
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int size = int.Parse(Console.ReadLine());
+
+            string[,] airspace = new string[size, size];
+
+            int planeRow = -1;
+            int planeCol = -1;
+            int planeArmor = 300;
+
+            int enemiesCount = 0;
+
+            for (int i = 0; i < airspace.GetLength(0); i++)
+            {
+                string newRow = Console.ReadLine();
+                for (int j = 0; j < airspace.GetLength(1); j++)
+                {
+                    string temp = newRow[j].ToString();
+
+                    airspace[i, j] = temp;
+
+                    if (temp == "E")
+                    {
+                        enemiesCount++;
+                    }
+
+                    if (temp == "J")
+                    {
+                        planeRow = i;
+                        planeCol = j;
+                        airspace[i, j] = "-";
+                    }
+                }
+            }
+
+            string command;
+
+            while (enemiesCount > 0)
+            {                
+                command = Console.ReadLine();
+
+                switch (command)
+                {
+                    case "up": planeRow--; break;
+                    case "down": planeRow++; break;
+                    case "left": planeCol--; break;
+                    case "right": planeCol++; break;
+                }
+
+                string currPosition = airspace[planeRow, planeCol];
+                airspace[planeRow, planeCol] = "-";
+
+                if (currPosition == "E")
+                {
+                    enemiesCount--;
+                    planeArmor -= 100;
+
+                    if(planeArmor == 0)
+                    {
+                        Console.WriteLine($"Mission failed, your jetfighter was shot down! Last coordinates [{planeRow}, {planeCol}]!");
+                        PrintMatrix(planeRow, planeCol, airspace);
+                        return;
+                    }
+                }
+                if(currPosition == "R")
+                {
+                    planeArmor = 300;
+                }
+            }
+
+            Console.WriteLine($"Mission accomplished, you neutralized the aerial threat!");
+            PrintMatrix(planeRow, planeCol, airspace);
+        }
+
+        private static void PrintMatrix(int planeRow, int planeCol, string[,] matrix)
+        {
+            matrix[planeRow, planeCol] = "J";
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for(int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write(matrix[i,j]);
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
