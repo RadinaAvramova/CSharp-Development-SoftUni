@@ -1,0 +1,6 @@
+G:\SoftUni\SoftUni Work\test\Boat Racing\BoatRacingSimulatorBroken\BoatRacingSimulator\BoatRacingSimulator\bin\Debug\BoatRacingSimulator.exe.config
+G:\SoftUni\SoftUni Work\test\Boat Racing\BoatRacingSimulatorBroken\BoatRacingSimulator\BoatRacingSimulator\bin\Debug\BoatRacingSimulator.exe
+G:\SoftUni\SoftUni Work\test\Boat Racing\BoatRacingSimulatorBroken\BoatRacingSimulator\BoatRacingSimulator\bin\Debug\BoatRacingSimulator.pdb
+G:\SoftUni\SoftUni Work\test\Boat Racing\BoatRacingSimulatorBroken\BoatRacingSimulator\BoatRacingSimulator\obj\Debug\BoatRacingSimulator.csprojResolveAssemblyReference.cache
+G:\SoftUni\SoftUni Work\test\Boat Racing\BoatRacingSimulatorBroken\BoatRacingSimulator\BoatRacingSimulator\obj\Debug\BoatRacingSimulator.exe
+G:\SoftUni\SoftUni Work\test\Boat Racing\BoatRacingSimulatorBroken\BoatRacingSimulator\BoatRacingSimulator\obj\Debug\BoatRacingSimulator.pdb
