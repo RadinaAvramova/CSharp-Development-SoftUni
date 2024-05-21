@@ -1,0 +1,3 @@
+Winner: Pancho
+Power: 6
+Stamina: 3
